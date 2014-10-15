@@ -1,7 +1,7 @@
 /* 控制导航栏样式*/
 function activeLink() {
   var url = document.URL;
-  var lasturl = url.slice(url.lastIndexOf("/")+1);
+  var lasturl = url.slice(url.indexOf("/",7)+1, url.length-1);
 
   if(lasturl == "") {
     var node = document.getElementById("home");
