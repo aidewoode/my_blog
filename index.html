@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div id="all_posts">
+    {% for post in site.posts %}
+      <article class="post">
+        <div class="post_time">{{ post.date | date: "%b %-d, %Y" }}</div>
+        <h2 class="post_title">
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="tag" href="/tag/{{ post.tags }}">{{post.tags}}</a>
+        </h2>
+      </article>
+      {% endfor %}
+</div>
+
