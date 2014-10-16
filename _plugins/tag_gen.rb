@@ -9,20 +9,13 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
       self.data['tag'] = tag
-<<<<<<< HEAD
-      self.data['title'] = "Posts Tagged &ldquo;"+tag+"&rdquo"
-=======
       self.data['title'] = "The result of &ldquo;"+tag+"&rdquo;"
->>>>>>> gh-pages
     end
   end
 
   class TagGenerator < Generator
     safe true
-<<<<<<< HEAD
-=======
 
->>>>>>> gh-pages
     def generate(site)
       if site.layouts.key? 'tag_index'
         dir = 'tag'
