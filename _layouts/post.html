@@ -9,7 +9,11 @@ layout: default
         <span class="post_time">
           {{ page.date | date: "%b %-d, %Y"}}
         </span>
+<<<<<<< HEAD
         <a class="post_tag" href="/#tags[{{post.tags}}]">{{ page.tags}}</a>
+=======
+        <a class="post_tag" href="{{ site.baseurl }}/tag/{{ page.tags }}">{{ page.tags}}</a>
+>>>>>>> gh-pages
       </div>
     </header>
     <div class="content">
@@ -17,8 +21,13 @@ layout: default
     </div>
   </article>
 </div>
+<<<<<<< HEAD
 <script src="/public/js/prism.js"></script>
 <script src="/public/js/headroom.min.js"></script>
+=======
+<script src="{{ site.baseurl }}/public/js/prism.js"></script>
+<script src="{{ site.baseurl }}/public/js/headroom.min.js"></script>
+>>>>>>> gh-pages
 <script>
 (function() {
    var header = new Headroom(document.querySelector("header.index"), {
