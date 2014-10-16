@@ -9,7 +9,7 @@ layout: default
         <span class="post_time">
           {{ page.date | date: "%b %-d, %Y"}}
         </span>
-        <a class="post_tag" href="/#tags[{{post.tags}}]">{{ page.tags}}</a>
+        <a class="post_tag" href="{{ site.baseurl }}/tags/{{post.tags}}">{{ page.tags}}</a>
       </div>
     </header>
     <div class="content">
@@ -17,8 +17,8 @@ layout: default
     </div>
   </article>
 </div>
-<script src="/public/js/prism.js"></script>
-<script src="/public/js/headroom.min.js"></script>
+<script src="{{ site.baseurl }}/public/js/prism.js"></script>
+<script src="{{ site.baseurl }}/public/js/headroom.min.js"></script>
 <script>
 (function() {
    var header = new Headroom(document.querySelector("header.index"), {

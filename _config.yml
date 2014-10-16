@@ -1,4 +1,6 @@
 # Site settings
 
+baseurl: /my_blog
+
 # Build settings
 markdown: kramdown
