@@ -3,4 +3,5 @@ baseurl: ""
 
 # Build settings
 markdown: kramdown
-exclude:  [ Gemfile, Gemfile.lock, Procfile, vendor]
+gems: ['kramdown']
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock','vendor','Procfile', 'Rakefile']

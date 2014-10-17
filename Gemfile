@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'RedCloth'
 gem 'jekyll'
+gem 'kramdown'
+gem 'rack-jekyll'
+gem 'rake'
+gem 'puma'
