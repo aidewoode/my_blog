@@ -3,10 +3,10 @@
   <channel>
     <title></title>
     <description></description>
-    <link>/my_blog/</link>
-    <atom:link href="/my_blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 17 Oct 2014 15:02:34 +0800</pubDate>
-    <lastBuildDate>Fri, 17 Oct 2014 15:02:34 +0800</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 18 Oct 2014 14:39:53 +0800</pubDate>
+    <lastBuildDate>Sat, 18 Oct 2014 14:39:53 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -21,8 +21,8 @@
 
 </description>
         <pubDate>Tue, 16 Sep 2014 00:00:00 +0800</pubDate>
-        <link>/my_blog/2014/09/16/I-love-Dinosaur-Jr.html</link>
-        <guid isPermaLink="true">/my_blog/2014/09/16/I-love-Dinosaur-Jr.html</guid>
+        <link>/2014/09/16/I-love-Dinosaur-Jr.html</link>
+        <guid isPermaLink="true">/2014/09/16/I-love-Dinosaur-Jr.html</guid>
         
         <category>Music</category>
         
