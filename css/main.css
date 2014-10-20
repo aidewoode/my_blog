@@ -179,14 +179,17 @@ section.index {
   padding-top: 35px; }
 
 article.post {
-  border-bottom: 3px solid #555;
+  border: 1px solid #faf0e6;
   display: block;
-  margin-top: 26.5px; }
+  margin-top: 26.5px;
+  background-color: #faf0e6;
+  border-radius: 15px; }
 
 div.post_time {
   font-size: 1.5em;
   color: #bbb;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-left: 10px; }
 
 h2.post_title {
   padding-left: 2em;
