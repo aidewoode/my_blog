@@ -6,8 +6,15 @@ layout: default
     {% for post in site.posts %}
       <article class="post">
         <h2 class="post_title">
-          <span class="post_time">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          <div class="time">
+            <span class="post_time">{{ post.date | date: "%b %-d, %Y" }}</span>
+          </div>
+          <div class="title">
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </div>
+          <div class="empty">
+            
+          </div>
         </h2>
       </article>
       {% endfor %}

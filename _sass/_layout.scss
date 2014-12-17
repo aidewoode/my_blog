@@ -29,6 +29,10 @@ div.site_title h1 {
   color: #444;
 }
 
+div.empty {
+  clear: both;
+}
+
 #nav {
   background: white;
   border-top: 1px solid #eee;
@@ -77,13 +81,12 @@ section.index {
 
 article.post {
   display: block;
-  text-align: center;
   margin-bottom: 20px;
 }
 
 span.post_time {
   color: #777;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 h2.post_title {
@@ -95,7 +98,20 @@ h2.post_title {
 
 h2.post_title a {
   text-decoration: none;
+  margin-left: 20px;
   color: #009999;
+}
+
+h2.post_title div.time {
+  float: left;
+  width: 50%;
+  text-align: right;
+
+}
+
+h2.post_title div.title {
+  float: left;
+  width: 50%;
 }
 
 h2.post_title a:hover {
@@ -217,8 +233,8 @@ div.content blockquote {
   padding: 0 0 0 12px;
   margin: 18px 0;
   font-family: Georgia, STKaiti, KaiTi, serif;
-  border-left: 6px solid #c3cace;
   font-style: italic;
+  text-align: center;
 }
 
 div.content table {
