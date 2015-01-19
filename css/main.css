@@ -3,7 +3,7 @@
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
   display: block; }
 
 body {
@@ -185,9 +185,13 @@ h2.post_title {
   font-weight: 400; }
 
 h2.post_title a {
+  display: block;
   text-decoration: none;
   margin-left: 20px;
-  color: #009999; }
+  color: #009999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 h2.post_title div.time {
   float: left;
@@ -218,7 +222,7 @@ div.single_post {
   max-width: 600px;
   width: auto;
   margin: auto;
-  padding-top: 40px; }
+  padding: 40px 11px 0px 11px; }
 
 article.single_post header {
   margin-bottom: 30px; }
@@ -352,12 +356,131 @@ div.about_page {
   max-width: 600px;
   width: auto;
   margin: auto;
-  padding-top: 40px; }
+  padding: 40px 11px 0px 11px; }
 
 div.about_page div.content {
   font-size: 1em; }
 
 /********************************************/
+@media screen and (max-width: 980px) {
+  div.site_title h1 {
+    font-size: 1.8em;
+    padding: 14px; }
+
+  #all_posts {
+    min-height: 550px; }
+
+  #nav nav.global_nav ul li a {
+    line-height: 2em; }
+
+  #all_posts {
+    padding-top: 30px; }
+
+  article.post {
+    margin-bottom: 19px; }
+
+  h2.post_title {
+    font-size: 1em; }
+
+  span.post_time {
+    margin-right: 16px; }
+
+  h2.post_title a {
+    margin-left: 16px; }
+
+  div.info span.post_time {
+    font-size: 1em; }
+
+  div.single_post {
+    padding: 30px 11px 0px 11px; }
+
+  div.about_page {
+    min-height: 550px;
+    padding: 30px 11px 0px 11px; } }
+@media screen and (max-width: 650px) {
+  div.site_title h1 {
+    font-size: 1.7em;
+    padding: 12px; }
+
+  #all_posts {
+    min-height: 500px; }
+
+  #nav nav.global_nav ul li a {
+    font-size: 0.8em;
+    line-height: 1.5em; }
+
+  #all_posts {
+    padding-top: 20px; }
+
+  article.post {
+    margin-bottom: 17px; }
+
+  h2.post_title {
+    font-size: 0.9em; }
+
+  span.post_time {
+    margin-right: 12px; }
+
+  h2.post_title a {
+    margin-left: 12px; }
+
+  article.single_post header h1 {
+    font-size: 1.4em; }
+
+  div.info span.post_time {
+    font-size: 0.9em; }
+
+  div.single_post {
+    padding: 20px 11px 0px 11px; }
+
+  div.about_page {
+    min-height: 500px;
+    padding: 20px 11px 0px 11px; }
+
+  div.about_page div.content {
+    font-size: 0.9em; } }
+@media screen and (max-width: 480px) {
+  div.site_title h1 {
+    font-size: 1.6em;
+    padding: 10px; }
+
+  #all_posts {
+    min-height: 450px; }
+
+  #nav nav.global_nav ul li a {
+    line-height: 1em; }
+
+  #all_posts {
+    padding-top: 10px; }
+
+  article.post {
+    margin-bottom: 15px; }
+
+  span.post_time {
+    margin-right: 10px; }
+
+  h2.post_title a {
+    margin-left: 10px; }
+
+  div.single_post {
+    padding: 15px 11px 0px 11px; }
+
+  div.about_page {
+    min-height: 450px;
+    padding: 10px 11px 0px 11px; } }
+@media screen and (max-width: 360px) {
+  div.site_title h1 {
+    font-size: 1.5em;
+    padding: 8px; }
+
+  article.post {
+    margin-bottom: 12px; }
+
+  article.single_post header h1 {
+    font-size: 1.3em; }
+
+  div.about_page div.content {
+    font-size: 0.8em; } }
 /* http://prismjs.com/download.html?themes=prism&languages=css+clike+javascript+coffeescript+c+ruby+objectivec */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
