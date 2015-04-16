@@ -1,0 +1,31 @@
+---
+permalink: /easymarked/
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>Easy Marked Editor</title>
+    <link rel="stylesheet" href="/css/easymarked.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body class="easyMarked">
+  
+    <div class="editor-demo">
+      <h1>Easy Marked Editor</h1>
+      <form action="" method="post">
+        <textarea id="easyMarked" ></textarea>
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.8/ace.js"></script>
+  <script type="text/javascript" src="/js/marked.js"></script>
+  <script type="text/javascript" src="/js/easymarked.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    var editor = new EasyMarked.Editor;
+    editor.load();
+  </script>
+
+</html>
+
+

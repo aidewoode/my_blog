@@ -318,6 +318,24 @@ div.about_page div.content {
   font-size: 1em;
 }
 
+body.easyMarked {
+  background: url(/image/easyMarkedWallPaper.jpg);
+  background-size: cover;
+}
+
+div.editor-demo {
+  margin: auto;
+  max-width: 700px;
+}
+
+div.editor-demo h1 {
+  text-align: center;
+  font-weight: 400;
+  margin: 50px 0;
+  font-size: 2.5em;
+  color: #0c9;
+}
+
 
 /********************************************/
 @media screen and (max-width: 980px) {
@@ -368,6 +386,7 @@ div.about_page div.content {
   }
 
 }
+
 @media screen and (max-width: 650px) {
   
   div.site_title h1 {
@@ -425,6 +444,7 @@ div.about_page div.content {
     font-size: 0.9em;
   }
 }
+
 @media screen and (max-width: 480px) {
   div.site_title h1 {
     font-size: 1.6em;
