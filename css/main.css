@@ -361,20 +361,23 @@ div.about_page {
 div.about_page div.content {
   font-size: 1em; }
 
+/* easymMarked editor page style*/
 body.easyMarked {
   background: url(/image/easyMarkedWallPaper.jpg);
   background-size: cover; }
 
-div.editor-demo {
-  margin: auto;
-  max-width: 700px; }
-
-div.editor-demo h1 {
+body.easyMarked h1 {
   text-align: center;
   font-weight: 400;
   margin: 50px 0;
   font-size: 2.5em;
-  color: #0c9; }
+  color: #555;
+  text-shadow: 0px 4px 15px #ccc; }
+
+div.editor-demo {
+  margin: auto;
+  max-width: 700px;
+  box-shadow: 1px 10px 50px #aaa; }
 
 /********************************************/
 @media screen and (max-width: 980px) {
