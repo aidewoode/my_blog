@@ -1,0 +1,14 @@
+body {
+  background-color: #fff;
+}
+
+.global-nav {
+  padding: 10px;
+}
+
+.global-nav__title {
+}
+
+.global-nav__list {
+  list-style: none;
+}

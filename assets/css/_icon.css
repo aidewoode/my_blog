@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'IconFont';
+  src: require('url!../fonts/icon.woff') format('woff'),
+       require('url!../fonts/icon.ttf')  format('truetype')
+}
+
+.icon {
+  font-family: 'IconFont';
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+}
+
+.icon--github:before { content: '\e800'; }
+.icon--mail:before { content: '\e801'; }
+.icon--rss:before { content: '\e802'; }
