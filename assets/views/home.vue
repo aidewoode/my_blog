@@ -1,15 +1,19 @@
 <template lang='jade'>
-  p {{articles.data[0].title}}
-  i.icon.icon--github
-<template>
+  .articles-container
+    ul.articles-list
+      article-preview(v-repeat="article in articles | orderBy 'id' -1")
+</template>
 
 <script>
   module.exports = {
     data: function() {
       return {
-        // test data
-        articles: require('../../data/articles.json')
+        articles: require('../../data/articles.json').data
       }
+    },
+
+    components: {
+      'article-preview': require('../components/article-preview.vue')
     }
   }
 </script>

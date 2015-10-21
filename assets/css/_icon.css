@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'IconFont';
-  src: require('url!../fonts/icon.woff') format('woff'),
-       require('url!../fonts/icon.ttf')  format('truetype')
+  src: url('../fonts/icon.woff') format('woff'),
+       url('../fonts/icon.ttf')  format('truetype');
 }
 
 .icon {
@@ -10,6 +10,7 @@
   font-weight: normal;
   font-style: normal;
   line-height: 1;
+  color: $icon-color;
 }
 
 .icon--github:before { content: '\e800'; }

@@ -15,7 +15,9 @@ module.exports = {
       { test: /\.css$/,
         loader:ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
       },
-      { test: /\.json$/, loader: 'json-loader'}
+      { test: /\.json$/, loader: 'json-loader' },
+      { test: /\.(md|woff|ttf)$/, loader: 'url-loader' },
+      { test: /\.md$/, loader: 'html!markdown' }
     ]
   },
 
@@ -25,5 +27,11 @@ module.exports = {
 
   postcss: function() {
     return [autoprefixer, precss];
+  },
+
+  remarkable: {
+    preset: 'full',
+    linkify: true,
+    typographer: true
   }
 }

@@ -3,6 +3,11 @@ module.exports = function(router) {
     '/': {
       name: 'home',
       component: require('./views/home.vue')
+    },
+
+    'articles/:id': {
+      name: 'article',
+      component: require('./views/article.vue')
     }
   });
 }

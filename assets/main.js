@@ -13,6 +13,7 @@ var router = new VueRouter({
   saveScrollPosition: true
 });
 
+require('./filters')(Vue);
 require('./routers')(router);
 
 router.start(App, '#app');

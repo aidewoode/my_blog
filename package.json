@@ -20,7 +20,9 @@
     "css-loader": "^0.20.2",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
+    "html-loader": "^0.3.0",
     "json-loader": "^0.5.3",
+    "markdown-loader": "^0.1.7",
     "postcss-loader": "^0.7.0",
     "postcss-scss": "^0.1.3",
     "precss": "^1.2.3",
@@ -33,6 +35,7 @@
   },
   "dependencies": {
     "jade": "^1.11.0",
+    "moment": "^2.10.6",
     "normalize.css": "^3.0.3",
     "vue": "^0.12.16",
     "vue-router": "^0.7.4"
