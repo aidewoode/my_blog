@@ -8,7 +8,7 @@
   module.exports = {
     data: function() {
       return {
-        articles: require('../../data/articles.json').data
+        articles: require('../data/articles.json').data
       }
     },
 

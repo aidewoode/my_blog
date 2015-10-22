@@ -5,7 +5,7 @@ module.exports = function(router) {
       component: require('./views/home.vue')
     },
 
-    'articles/:id': {
+    '/articles/:id': {
       name: 'article',
       component: require('./views/article.vue')
     }
