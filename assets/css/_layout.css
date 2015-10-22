@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+  font-size: $default-root-font-size;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  font-family: $default-font-family;
+}
+
+.global-nav {
+  padding: 50px;
+}
+
+.global-nav__title {
+  font-family: 'Merriweather';
+  font-size: 24px;
+  text-decoration: none;
+  color: $main-color;
+}
+
+.global-nav__list {
+  list-style: none;
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+
+.global-nav__item {
+  float: left;
+}
+
+.global-nav__link {
+  padding: 0 10px;
+  line-height: 31px;
+}
+
+.content-container {
+  max-width: 750px;
+  margin: auto;
+  margin-top: 60px;
+  padding: 0 15px;
+}
+
+.articles-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
