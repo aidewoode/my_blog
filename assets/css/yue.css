@@ -7,12 +7,15 @@
  */
 
 .yue {
-  font: 400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  font-weight: 400;
+  line-height: 1.62rem;
+  font-size: 1rem;
   color: #444443;
 }
 
 .windows .yue {
-  font-size: 16px;
+  font-size: 0.89rem;
   font-family: "Georgia", "SimSun", sans-serif;
 }
 

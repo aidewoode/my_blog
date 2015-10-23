@@ -1,5 +1,7 @@
 require('normalize.css');
 require('./css/index.css');
+// typography style, from https://github.com/lepture/yue.css.
+// But I do a little change in this stylesheet.
 require('./css/yue.css');
 
 var Vue = require('vue');
@@ -13,4 +15,4 @@ var router = new VueRouter();
 require('./filters')(Vue);
 require('./routers')(router);
 
-router.start(App, '#app');
+router.start(App, '#js-app');

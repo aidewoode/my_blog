@@ -1,7 +1,9 @@
+var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var vue = require('vue-loader');
 var autoprefixer = require('autoprefixer');
 var precss = require('precss');
+var cssnano = require('cssnano');
 
 module.exports = {
   entry: './assets/main.js',
@@ -28,11 +30,12 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new webpack.optimize.UglifyJsPlugin()
   ],
 
   postcss: function() {
-    return [autoprefixer, precss];
+    return [autoprefixer, precss, cssnano];
   },
 
   remarkable: {
