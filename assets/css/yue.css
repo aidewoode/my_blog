@@ -40,11 +40,11 @@
 .yue h1 {
   font-size: 1.8em;
   margin: 0.67em 0;
+  line-height: 1.1em;
 }
 
 .yue > h1 {
   margin-top: 0;
-  font-size: 2em;
 }
 
 .yue h2 {
