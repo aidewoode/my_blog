@@ -35,7 +35,7 @@ body {
 }
 
 .global-nav__item {
-  float: left;
+  display: inline-block;
 }
 
 .global-nav__link {
