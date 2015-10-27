@@ -5,7 +5,18 @@
   module.exports = {
     data: function() {
       return {
-        article: require('../articles/' + this.$route.params.id + '.md')
+        article: null
+      };
+    },
+
+    route: {
+      data: function(transition) {
+        var fetch = require('../fetch');
+        var marked = require('marked');
+
+        fetch('articles', this.$route.params.id, function(response) {
+          transition.next({ article: marked(response) });
+        }.bind(this));
       }
     }
   }

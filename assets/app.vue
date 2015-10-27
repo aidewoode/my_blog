@@ -13,5 +13,5 @@
         a.global-nav__link(href='#')
           i.icon.icon--rss
    .content-container
-     <router-view></router-view>
+     router-view
 </template>

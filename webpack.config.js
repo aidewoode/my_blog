@@ -24,8 +24,7 @@ module.exports = {
       },
 
       { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.(woff|ttf)$/, loader: 'url-loader' },
-      { test: /\.md$/, loader: 'html!remarkable'}
+      { test: /\.(woff|ttf)$/, loader: 'url-loader' }
     ]
   },
 
