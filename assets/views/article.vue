@@ -13,6 +13,8 @@
 
     route: {
       data: function(transition) {
+        this.loading = true;
+
         var fetch = require('../fetch');
         var marked = require('marked');
 
