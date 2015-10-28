@@ -3,6 +3,8 @@
 </template>
 <script>
   module.exports = {
+    inherit: true,
+
     data: function() {
       return {
         article: null
@@ -15,7 +17,7 @@
         var marked = require('marked');
 
         fetch('articles', this.$route.params.id, function(response) {
-          transition.next({ article: marked(response) });
+          transition.next({ article: marked(response), loading: false });
         }.bind(this));
       }
     }

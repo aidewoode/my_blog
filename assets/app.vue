@@ -12,6 +12,20 @@
       li.global-nav__item
         a.global-nav__link(href='#')
           i.icon.icon--rss
+     loader(v-if='loading')
    .content-container
      router-view
 </template>
+<script>
+  module.exports = {
+    data: function() {
+      return {
+        loading: true
+      };
+    },
+
+    components: {
+      'loader': require('./components/loader.vue')
+    }
+  }
+</script>

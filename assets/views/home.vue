@@ -6,9 +6,18 @@
 
 <script>
   module.exports = {
+    inherit: true,
+
     data: function() {
       return {
-        articles: require('../data/articles.json').data
+        articles: null
+      }
+    },
+
+    route: {
+      data: function(transition) {
+        var data = require('../data/articles.json').data;
+        transition.next({ articles: data, loading: false });
       }
     },
 
