@@ -12,6 +12,7 @@ Vue.use(VueRouter);
 
 var router = new VueRouter();
 
+require('./mixin')(Vue);
 require('./filters')(Vue);
 require('./routers')(router);
 

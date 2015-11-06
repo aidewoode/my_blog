@@ -17,6 +17,7 @@ body {
 .global-nav {
   padding: 2.78rem;
   display: flex;
+  align-items: center;
 }
 
 .global-nav__title {
@@ -24,14 +25,12 @@ body {
   font-size: 1.33rem;
   text-decoration: none;
   color: $main-color;
-  align-self: center;
 }
 
 .global-nav__list {
   list-style: none;
   margin: 0 0 0 .83rem;
   padding: 0;
-  align-self: center;
 }
 
 .global-nav__item {
@@ -54,4 +53,3 @@ body {
   margin: 0;
   padding: 0;
 }
-

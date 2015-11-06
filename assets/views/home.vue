@@ -1,19 +1,49 @@
 <template lang='jade'>
   .articles-container
     ul.articles-list
-      article-preview(v-repeat="article in articles | orderBy 'id' -1")
+    li.articles-list__item(v-for="article in articles | orderBy 'id' -1")
+      .articles-list__date {{article.date | formattedDate}}
+      .articles-list__title
+        a.articles-list__link(v-link="{ name: 'article', params: { id: article.id }}") {{article.title}}
 </template>
-
 <script>
   module.exports = {
     data: function() {
       return {
         articles: require('../data/articles.json').data
       }
-    },
-
-    components: {
-      'article-preview': require('../components/article-preview.vue')
     }
   }
 </script>
+<style>
+  .articles-list__item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3.33rem;
+    align-items: center;
+  }
+
+  .articles-list__date {
+    width: 30%;
+    color: rgb(101, 103, 101);
+    font-size: 1rem;
+  }
+
+  .articles-list__title {
+    width: 70%;
+    font-size: 1.22rem;
+    font-weight: 400;
+    font-family: 'Merriweather', 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei', 'Wenquanyi Micro Hi', sans-serif;
+  }
+
+  .articles-list__link {
+    color: rgb(28, 28, 28);
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    .articles-list__date {
+      width: 100%;
+    }
+  }
+</style>
