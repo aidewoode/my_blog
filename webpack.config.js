@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var vue = require('vue-loader');
 var autoprefixer = require('autoprefixer');
 var precss = require('precss');
 var cssnano = require('cssnano');
@@ -14,18 +13,28 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.vue$/, loader: vue.withLoaders({
-          css: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
-        })
-      },
-
+      { test: /\.vue$/, loader: 'vue' },
       { test: /\.css$/,
         loader:ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
       },
 
       { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.(woff|ttf)$/, loader: 'url-loader' }
+      { test: /\.(woff|ttf)$/, loader: 'url-loader' },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel',
+        query: {
+          presets: ['es2015']
+        }
+      }
     ]
+  },
+
+  vue: {
+    loaders: {
+      css: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
+    }
   },
 
   plugins: [

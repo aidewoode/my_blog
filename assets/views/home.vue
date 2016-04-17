@@ -1,16 +1,18 @@
 <template lang='jade'>
   .articles-container
     ul.articles-list
-    li.articles-list__item(v-for="article in articles | orderBy 'id' -1")
-      .articles-list__date {{article.date | formattedDate}}
+    li.articles-list__item(v-for="article of articles | orderBy 'id' -1")
+      .articles-list__date {{ article.date | formattedDate }}
       .articles-list__title
         a.articles-list__link(v-link="{ name: 'article', params: { id: article.id }}") {{article.title}}
 </template>
 <script>
-  module.exports = {
-    data: function() {
+  import articles from '../data/articles.json'
+
+  export default {
+    data() {
       return {
-        articles: require('../data/articles.json').data
+        articles: articles.data
       }
     }
   }

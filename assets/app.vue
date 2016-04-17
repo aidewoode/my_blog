@@ -17,15 +17,15 @@
      router-view
 </template>
 <script>
-  module.exports = {
-    data: function() {
-      return {
-        loading: false
-      };
+  import loader from './components/loader.vue';
+
+  export default {
+    data() {
+      return { loading: false };
     },
 
     components: {
-      'loader': require('./components/loader.vue')
+      'loader': loader
     }
   }
 </script>

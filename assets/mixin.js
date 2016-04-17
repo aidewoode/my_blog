@@ -1,11 +1,11 @@
-module.exports = function(vue) {
+export default function(vue) {
   vue.mixin({
     methods: {
-      startLoading: function() {
+      startLoading() {
         this.$root.loading = true;
       },
 
-      stopLoading: function() {
+      stopLoading() {
         this.$root.loading = false;
       }
     }

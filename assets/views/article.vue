@@ -2,24 +2,22 @@
   .yue {{{article}}}
 </template>
 <script>
-  module.exports = {
-    data: function() {
-      return {
-        article: null
-      };
+  import fetch from '../fetch';
+  import marked from 'marked';
+
+  export default {
+    data() {
+      return { article: null }
     },
 
     route: {
-      data: function(transition) {
+      data(transition) {
         this.startLoading();
 
-        var fetch = require('../fetch');
-        var marked = require('marked');
-
-        fetch('articles', this.$route.params.id, function(response) {
+        fetch('articles', this.$route.params.id, (response) => {
           transition.next({ article: marked(response) });
           this.stopLoading();
-        }.bind(this));
+        });
       }
     }
   }

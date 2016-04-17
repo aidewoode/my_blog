@@ -1,7 +1,7 @@
-module.exports = function(type, id, action) {
-  var request = new XMLHttpRequest();
+export default function(type, id, action) {
+  let request = new XMLHttpRequest();
 
-  request.onreadystatechange = function() {
+  request.onreadystatechange = () => {
     if (request.readyState == 4 && request.status == 200) {
       action(request.responseText);
     }

@@ -1,19 +1,23 @@
-require('normalize.css');
-require('./css/index.css');
+import 'normalize.css';
+import './css/index.css';
+
 // typography style, from https://github.com/lepture/yue.css.
 // But I do a little change in this stylesheet.
-require('./css/yue.css');
+import './css/yue.css';
 
-var Vue = require('vue');
-var VueRouter = require('vue-router');
-var App = require('./app.vue');
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import App from './app.vue';
+import mixin from './mixin';
+import filters from './filters';
+import routers from './routers';
 
 Vue.use(VueRouter);
 
-var router = new VueRouter();
+let router = new VueRouter();
 
-require('./mixin')(Vue);
-require('./filters')(Vue);
-require('./routers')(router);
+mixin(Vue);
+filters(Vue);
+routers(router);
 
 router.start(App, '#js-app');
