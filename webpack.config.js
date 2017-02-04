@@ -16,7 +16,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel!eslint'
-      }
+      },
+      { test: /\.json$/, loader: 'json' },
+      { test: /\.(woff|ttf)$/, loader: 'url' }
     ]
+  },
+
+  vue: {
+    postcss: [require('postcss-cssnext')()]
   }
 }

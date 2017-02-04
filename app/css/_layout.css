@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: $default-root-font-size;
+  font-size: var(--defaultRootFontSize);
 }
 
 *,
@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: #fff;
-  font-family: $default-font-family;
+  font-family: var(--defaultFontFamily);
 }
 
 .global-nav {
@@ -24,7 +24,7 @@ body {
   font-family: 'Merriweather';
   font-size: 1.33rem;
   text-decoration: none;
-  color: $main-color;
+  color: var(--mainColor);
 }
 
 .global-nav__list {
