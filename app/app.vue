@@ -1,7 +1,7 @@
 <template lang='pug'>
 .site-content
   nav.global-nav
-    a.global-nav__title Aide's Blog
+    router-link.global-nav__title(:to="{ name: 'home'}") Aide's Blog
     ul.global-nav__list
       li.global-nav__item
         a.global-nav__link(href='https://github.com/aidewoode' target='_blank')
@@ -18,10 +18,19 @@
 </template>
 <script>
   import loader from './components/loader.vue';
+  import mixin from './mixin';
 
   export default {
+    mixins: [mixin],
+
     data() {
       return { loading: false };
+    },
+
+    created() {
+      this.loadingBus.$on('toggleLoading', (val) => {
+        this.loading = val;
+      });
     },
 
     components: {

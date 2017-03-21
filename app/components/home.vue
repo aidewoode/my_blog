@@ -1,21 +1,37 @@
 <template lang='pug'>
 .articles-container
   ul.articles-list
-  li.articles-list__item(v-for='article in articles')
-    .articles-list__date {{ article.date | formattedDate }}
+  li.articles-list__item(v-for='article of sortedArticles')
+    .articles-list__date {{ formattedDate(article.date) }}
     .articles-list__title
-      a.articles-list__link {{article.title}}
+      router-link(class='articles-list__link', :to="{ name: 'article', params: { id: article.id }}") {{ article.title }}
 </template>
 <script>
-  import articles from '../data/articles.json';
+import moment from 'moment';
+import articles from '../data/articles.json';
 
-  export default {
-    data() {
-      return {
-        articles: articles.data
-      };
+export default {
+  data() {
+    return {
+      articles: articles.data
+    };
+  },
+
+  computed: {
+    sortedArticles() {
+      return this.articles.sort((a, b) => {
+        return b.id - a.id;
+      });
     }
-  };
+  },
+
+  methods: {
+    formattedDate(value) {
+      const date = new Date(value);
+      return moment(date).format('ll');
+    }
+  }
+};
 </script>
 <style>
 .articles-list__item {

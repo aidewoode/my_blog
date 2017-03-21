@@ -1,24 +1,41 @@
-<template lang='jade'>
-  .yue {{{article}}}
+<template lang='pug'>
+.yue(v-html='article')
 </template>
 <script>
-  import fetch from '../fetch';
-  import marked from 'marked';
+import marked from 'marked';
+import mixin from '../mixin';
 
-  export default {
-    data() {
-      return { article: null }
-    },
+export default {
+  mixins: [mixin],
 
-    route: {
-      data(transition) {
-        this.startLoading();
+  data() {
+    return { article: null };
+  },
 
-        fetch('articles', this.$route.params.id, (response) => {
-          transition.next({ article: marked(response) });
-          this.stopLoading();
-        });
-      }
+  created() {
+    this.fetchArticle();
+  },
+
+  watch: {
+    $route: 'fetchArticle'
+  },
+
+  methods: {
+    fetchArticle() {
+      this.loadingBus.$emit('toggleLoading', true);
+
+      const request = new XMLHttpRequest();
+
+      request.onreadystatechange = () => {
+        if (request.readyState == 4 && request.status == 200) {
+          this.article = marked(request.responseText);
+          this.loadingBus.$emit('toggleLoading', false);
+        }
+      };
+
+      request.open('GET', `articles/${this.$route.params.id}.md`, true);
+      request.send();
     }
   }
+};
 </script>

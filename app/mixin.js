@@ -1,13 +1,10 @@
-export default function(vue) {
-  vue.mixin({
-    methods: {
-      startLoading() {
-        this.$root.loading = true;
-      },
+import Vue from 'vue';
 
-      stopLoading() {
-        this.$root.loading = false;
-      }
-    }
-  });
-}
+const newVueinstance = new Vue();
+export default {
+  data() {
+    return {
+      loadingBus: newVueinstance
+    };
+  }
+};
