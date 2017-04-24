@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/aidewoode/my_blog#readme",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server",
+    "start": "./node_modules/.bin/webpack-dev-server --inline --hot",
     "bundle": "./node_modules/.bin/webpack"
   },
   "devDependencies": {
@@ -32,16 +32,15 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "postcss-cssnext": "^2.9.0",
     "pug": "^2.0.0-beta6",
+    "url-loader": "^0.5.8",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.7",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.4"
   },
   "dependencies": {
-    "json-loader": "^0.5.4",
     "marked": "^0.3.6",
     "moment": "^2.17.1",
-    "url-loader": "^0.5.7",
     "vue": "^2.1.7",
     "vue-router": "^2.1.1"
   }

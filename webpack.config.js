@@ -1,28 +1,38 @@
 module.exports = {
-  entry: './app/app.js',
+  entry: __dirname + '/app/app.js',
   output: {
-    path: './app',
-    filename: 'bundle.js'
+    path: __dirname + '/app',
+    filename: 'bundle.js',
+    publicPath: 'http://localhost:8080/assets'
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
         exclude: /node_modules/,
-        loader: 'vue!eslint'
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              postcss: [require('postcss-cssnext')()]
+            }
+          },
+
+          {
+            loader: 'eslint-loader'
+          }
+        ]
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel!eslint'
+        use: [
+          'babel-loader',
+          'eslint-loader'
+        ]
       },
-      { test: /\.json$/, loader: 'json' },
-      { test: /\.(woff|ttf)$/, loader: 'url' }
+      { test: /\.(woff|ttf)$/, loader: 'url-loader' }
     ]
-  },
-
-  vue: {
-    postcss: [require('postcss-cssnext')()]
   }
 }

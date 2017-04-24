@@ -7,6 +7,14 @@
   </head>
   <body>
     <div id="js-app"></div>
-    <script type="text/javascript" src="app/bundle.js" charset="utf-8"></script>
+    <script type="text/javascript"  charset="utf-8">
+      (function() {
+        var script = document.createElement('script');
+        var hostName = window.location.hostname;
+
+        script.src = (hostName == 'localhost' ? '/assets/bundle.js' : 'app/bundle.js');
+        document.body.appendChild(script);
+      })();
+    </script>
   </body>
 </html>

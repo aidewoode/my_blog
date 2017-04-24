@@ -2,20 +2,19 @@
 
 ## Introdution
 
-This is source code of my own blog, and it build with [vue.js](http://vuejs.org) and [webpack](https://webpack.github.io).
-
+This is source code of my own blog, and it build with [vue.js](http://vuejs.org).
 ## Development
 
 Just clone this repository, then install all dependencies
 
 ```shell
- $ npm install
+ $ yarn
 ```
 
-Then you can use webpack-dev-server to serve this site in development environment
+Then you can serve this site in development environment
 
 ```shell
- $ webpack-dev-server
+ $ yarn run start
 ```
 
 ## Deployment
