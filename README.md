@@ -14,7 +14,7 @@ Just clone this repository, then install all dependencies
 Then you can serve this site in development environment
 
 ```shell
- $ yarn run start
+ $ yarn run server
 ```
 
 ## Deployment

@@ -7,7 +7,6 @@
       router-link(class='articles-list__link', :to="{ name: 'article', params: { id: article.id }}") {{ article.title }}
 </template>
 <script>
-import moment from 'moment';
 import articles from '../data/articles.json';
 
 export default {
@@ -28,7 +27,11 @@ export default {
   methods: {
     formattedDate(value) {
       const date = new Date(value);
-      return moment(date).format('ll');
+      return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
     }
   }
 };
