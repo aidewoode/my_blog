@@ -39,6 +39,7 @@
     "webpack-dev-server": "^2.4.4"
   },
   "dependencies": {
+    "browser-update": "^2.0.0",
     "marked": "^0.3.6",
     "vue": "^2.1.7",
     "vue-router": "^2.1.1"

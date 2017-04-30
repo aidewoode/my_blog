@@ -1,0 +1,18 @@
+/* overwrite the css of browser update plugin */
+
+body .buorg {
+  background-color: #fff;
+  border: none;
+  font-size: 14px;
+}
+
+body .buorg div {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+body .buorg div a, body .buorg div a:visited {
+  background: var(--mainColor);
+  margin-left: 20px;
+  box-shadow: none;
+}
