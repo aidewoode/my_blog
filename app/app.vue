@@ -33,7 +33,8 @@
 
     mounted() {
       browserUpdate({
-        vs: { i: 11, f: 50, o: 17, s: 10, c: 50 },
+        vs: { i: 10, f: 50, o: 17, s: 10, c: 50 },
+        reminder: 0,
         text_en: `
           Your browser, {brow_name}, is too old.
           This site maybe have some display issues on your browser,
