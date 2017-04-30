@@ -53,3 +53,22 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.content-404 {
+  max-width: 404px;
+  margin: auto;
+  text-align: center;
+  padding-top: 6rem;
+}
+
+.content-404__header {
+  color: rgb(255, 196, 8);
+  font-size: 1.6rem;
+  letter-spacing: .5rem;
+  margin-bottom: 2.8rem;
+}
+
+.content-404__footer {
+  color: #555;
+  font-size: .9rem;
+}
