@@ -52,9 +52,8 @@ export default {
 
 .articles-list__title {
   width: 70%;
-  font-size: 1.22rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  font-family: 'Merriweather', 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei', 'Wenquanyi Micro Hi', sans-serif;
 }
 
 .articles-list__link {
