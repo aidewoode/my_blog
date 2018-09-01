@@ -1,5 +1,7 @@
 # Aide's Blog
 
+## Note: I don't use this for blog any more, I have migrated to jekyll. 
+
 ## Introdution
 
 This is source code of my own blog, and it build with [vue.js](http://vuejs.org).
